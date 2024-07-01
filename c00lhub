@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/thanhdat4461/OrionMoblie/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "c00lhub(beta)v0. 1", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "c00lhub(beta)v0.0.2", HidePremium = false, SaveConfig = true, ConfigFolder = "c00lhub"})
 
 --[[
 Name = <string> - The name of the UI.
@@ -48,9 +48,9 @@ Time = <number> - The duration of the notfication.
 ]]
 
 Tab:AddButton({
-	Name = "ghub",
+	Name = "system hub v2",
 	Callback = function()
-      		loadstring(game:HttpGet("https://raw.githubusercontent.com/gcl...​"))()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/AHMEDPLPL/System-hub/main/System%20hub%20V2', true))();
   	end    
 })
 
