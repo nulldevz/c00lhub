@@ -2,7 +2,7 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/tha
 local Window = OrionLib:MakeWindow({Name = "c00lhub(beta)v0.0.2", HidePremium = false, IntroText = "loading c00lgub...",  SaveConfig = true, ConfigFolder = "c00lhub"})
 
 local Tab = Window:MakeTab({
-	Name = "Player",
+	Name = "hub/gui",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -13,18 +13,9 @@ Icon = <string> - The icon of the tab.
 PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
 ]]
 
-
-local Section = Tab:AddSection({
-	Name = "Local PLayer"
-})
-
---[[
-Name = <string> - The name of the section.
-]]
-
 OrionLib:MakeNotification({
-	Name = "Welcome! ",
-	Content = "hub made by: daviz & adna and nulldevz ",
+	Name = "welcome! ",
+	Content = "made by nulldevz and daviz & adna",
 	Image = "rbxassetid://4483345998",
 	Time = 5
 })
@@ -36,44 +27,8 @@ Image = <string> - The icon of the notification.
 Time = <number> - The duration of the notfication.
 ]]
 
-Tab:AddButton({
-	Name = "high speed",
-	Callback = function()
-      		player. Character. Humanoid. WalkSpeed = 500
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-
-Tab:AddButton({
-	Name = "high jump",
-	Callback = function()
-      		player. Character. Humanoid. JumpPower = 100
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-
-local Tab = Window:MakeTab({
-	Name = "Hub/Gui",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
---[[
-Name = <string> - The name of the tab.
-Icon = <string> - The icon of the tab.
-PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
-]]
-
 local Section = Tab:AddSection({
-	Name = "Hubs"
+	Name = "hubs"
 })
 
 --[[
@@ -81,19 +36,7 @@ Name = <string> - The name of the section.
 ]]
 
 Tab:AddButton({
-	Name = "System Hub",
-	Callback = function()
-      		loadstring(game:HttpGet('https://raw.githubusercontent.com/AHMEDPLPL/System-hub/main/System%20hub%20V2', true))();
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-
-Tab:AddButton({
-	Name = "Revz Hub",
+	Name = "revz hub",
 	Callback = function()
       		loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/REDzHUB/main/REDzHUB"))()
   	end    
@@ -107,7 +50,19 @@ Callback = <function> - The function of the button.
 Tab:AddButton({
 	Name = "Ghub",
 	Callback = function()
-      		
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/gclich/GHUBV14XZ/main/Ghub_Main_Loader.txt"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+Tab:AddButton({
+	Name = "System Hub v2",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/AHMEDPLPL/System-hub/main/System%20hub%20V2', true))();
   	end    
 })
 
@@ -117,7 +72,7 @@ Callback = <function> - The function of the button.
 ]]
 
 local Section = Tab:AddSection({
-	Name = "Guis"
+	Name = "guis"
 })
 
 --[[
@@ -128,18 +83,6 @@ Tab:AddButton({
 	Name = "c00lgui",
 	Callback = function()
       		loadstring(game:GetObjects("rbxassetid://8127297852")[1].Source)()
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-
-Tab:AddButton({
-	Name = "fe bypass gui",
-	Callback = function()
-      	loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104	
   	end    
 })
 
