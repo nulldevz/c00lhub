@@ -27,41 +27,55 @@ Image = <string> - The icon of the notification.
 Time = <number> - The duration of the notfication.
 ]]
 
-Tab:AddTextbox({
-	Name = "Walkspeed",
-	Default = "1490",
-	TextDisappear = true,
+Tab:AddSlider({
+	Name = "WalkSpeed",
+	Min = 20,
+	Max = 10000,
+	Default = 1490,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "WS",
 	Callback = function(Value)
 		game.Workspace.Players.LocalPlayer.Character.Humanoid.Walkspeed = Value
-	end	  
+	end    
 })
 
 --[[
-Name = <string> - The name of the textbox.
-Default = <string> - The default value of the textbox.
-TextDisappear = <bool> - Makes the text disappear in the textbox after losing focus.
-Callback = <function> - The function of the textbox.
+Name = <string> - The name of the slider.
+Min = <number> - The minimal value of the slider.
+Max = <number> - The maxium value of the slider.
+Increment = <number> - How much the slider will change value when dragging.
+Default = <number> - The default value of the slider.
+ValueName = <string> - The text after the value number.
+Callback = <function> - The function of the slider.
 ]]
 
-Tab:AddTextbox({
-	Name = "JumpHigh",
-	Default = "1490",
-	TextDisappear = true,
+Tab:AddSlider({
+	Name = "Junp Height",
+	Min = 9,
+	Max = 30,
+	Default = 9,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Height",
 	Callback = function(Value)
 		game.Workspace.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
-	end	  
+	end    
 })
 
 --[[
-Name = <string> - The name of the textbox.
-Default = <string> - The default value of the textbox.
-TextDisappear = <bool> - Makes the text disappear in the textbox after losing focus.
-Callback = <function> - The function of the textbox.
+Name = <string> - The name of the slider.
+Min = <number> - The minimal value of the slider.
+Max = <number> - The maxium value of the slider.
+Increment = <number> - How much the slider will change value when dragging.
+Default = <number> - The default value of the slider.
+ValueName = <string> - The text after the value number.
+Callback = <function> - The function of the slider.
 ]]
 
 Tab:AddButton({
 	Name = "esp",
-	Callback = function()
+	Callback = function(Jumppower)
       		loadstring(game:HttpGet('https://raw.githubusercontent.com/Infinity2346/Tect-Menu/main/Evade.txt'))()
   	end    
 })
