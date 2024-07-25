@@ -29,7 +29,7 @@ Time = <number> - The duration of the notfication.
 
 Tab:AddTextbox({
 	Name = "Walkspeed",
-	Default = "default box input",
+	Default = "1490",
 	TextDisappear = true,
 	Callback = function(Value)
 		game.Workspace.Players.LocalPlayer.Character.Humanoid.Walkspeed = Value
@@ -45,7 +45,7 @@ Callback = <function> - The function of the textbox.
 
 Tab:AddTextbox({
 	Name = "JumpHigh",
-	Default = "default box input",
+	Default = "1490",
 	TextDisappear = true,
 	Callback = function(Value)
 		game.Workspace.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
