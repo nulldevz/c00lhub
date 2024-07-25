@@ -1,8 +1,8 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/thanhdat4461/OrionMoblie/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "c00lhub(beta)v0.0.2", HidePremium = false, IntroText = "loading c00lgub...",  SaveConfig = true, ConfigFolder = "c00lhub"})
+local Window = OrionLib:MakeWindow({Name = "Nullgui|Evade", HidePremium = false, IntroText = "loading nullgui...",  SaveConfig = true, ConfigFolder = "nullguievade"})
 
 local Tab = Window:MakeTab({
-	Name = "hub/gui",
+	Name = "main",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -27,18 +27,42 @@ Image = <string> - The icon of the notification.
 Time = <number> - The duration of the notfication.
 ]]
 
-local Section = Tab:AddSection({
-	Name = "hubs"
+Tab:AddTextbox({
+	Name = "Walkspeed",
+	Default = "default box input",
+	TextDisappear = true,
+	Callback = function(Value)
+		game.Workspace.Players.LocalPlayer.Character.Humanoid.Walkspeed = Value
+	end	  
 })
 
 --[[
-Name = <string> - The name of the section.
+Name = <string> - The name of the textbox.
+Default = <string> - The default value of the textbox.
+TextDisappear = <bool> - Makes the text disappear in the textbox after losing focus.
+Callback = <function> - The function of the textbox.
+]]
+
+Tab:AddTextbox({
+	Name = "JumpHigh",
+	Default = "default box input",
+	TextDisappear = true,
+	Callback = function(Value)
+		game.Workspace.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+	end	  
+})
+
+--[[
+Name = <string> - The name of the textbox.
+Default = <string> - The default value of the textbox.
+TextDisappear = <bool> - Makes the text disappear in the textbox after losing focus.
+Callback = <function> - The function of the textbox.
 ]]
 
 Tab:AddButton({
-	Name = "revz hub",
+	Name = "esp",
 	Callback = function()
-      		loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/REDzHUB/main/REDzHUB"))()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/Infinity2346/Tect-Menu/main/Evade.txt'))()
   	end    
 })
 
@@ -46,49 +70,18 @@ Tab:AddButton({
 Name = <string> - The name of the button.
 Callback = <function> - The function of the button.
 ]]
-
-Tab:AddButton({
-	Name = "Ghub",
-	Callback = function()
-      		loadstring(game:HttpGet("https://raw.githubusercontent.com/gclich/GHUBV14XZ/main/Ghub_Main_Loader.txt"))()
-  	end    
+local Tab = Window:MakeTab({
+	Name = "credits",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
 })
 
 --[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
 ]]
 
-Tab:AddButton({
-	Name = "System Hub v2",
-	Callback = function()
-      		loadstring(game:HttpGet('https://raw.githubusercontent.com/AHMEDPLPL/System-hub/main/System%20hub%20V2', true))();
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-
-local Section = Tab:AddSection({
-	Name = "guis"
-})
-
---[[
-Name = <string> - The name of the section.
-]]
-
-Tab:AddButton({
-	Name = "c00lgui",
-	Callback = function()
-      		loadstring(game:GetObjects("rbxassetid://8127297852")[1].Source)()
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
+Tab:AddLabel("credits for nulldevz and daviz & adna")
 
 OrionLib:Init()
