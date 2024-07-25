@@ -40,6 +40,8 @@ Tab:AddSlider({
 	end    
 })
 
+Slider:Set(WS)
+
 --[[
 Name = <string> - The name of the slider.
 Min = <number> - The minimal value of the slider.
@@ -51,7 +53,7 @@ Callback = <function> - The function of the slider.
 ]]
 
 Tab:AddSlider({
-	Name = "Junp Height",
+	Name = "Jump Height",
 	Min = 9,
 	Max = 30,
 	Default = 9,
@@ -62,6 +64,8 @@ Tab:AddSlider({
 		game.Workspace.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
 	end    
 })
+
+Slider:Set(Height)
 
 --[[
 Name = <string> - The name of the slider.
